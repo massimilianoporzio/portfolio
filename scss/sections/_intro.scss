@@ -1,5 +1,6 @@
 @use '../custom' as *;
 @use '../components/mixins' as *;
+@use '../components/animations' as *;
 
 .intro-section {
   @include gradient;
@@ -9,13 +10,32 @@
 
 }
 
+.border-animation {
+  position: absolute;
+  width: 6rem; // stesso dell'icona
+  height: 6rem;
+  border: 0.55rem solid $white;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  animation: pulse-border 1s linear infinite;
+
+  &--border-1 {
+    animation-delay: 1s;
+  }
+  &--border-2 {
+    animation-delay: 1.5s;
+  }
+}
+
 .intros {
   //margin-bottom: 10%;
   @include media-breakpoint-down(sm){
-    position: absolute;
+    position: relative;
 
 
   }
+
   .video-box{
     position: relative;
 
