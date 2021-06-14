@@ -1,4 +1,5 @@
 @use '../custom' as *;
+@use '../components/mixins' as *;
 
 .display-2{
   margin-bottom: 1rem;
@@ -43,4 +44,28 @@
 .display-3{
   font-family: 'Poppins', sans-serif;
   text-transform: capitalize;
+
+
+  &--title {
+    @include media-breakpoint-up(lg){
+      font-size: 1.8rem;
+    }
+
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    display: inline-block;
+    background: linear-gradient(to right,$primary, $secondary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+
+  }
+}
+
+.border-right {
+  border-right: 0.1rem solid $green-200;
+  height: 100%;
+
 }
