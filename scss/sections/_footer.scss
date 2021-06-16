@@ -94,3 +94,16 @@
     }
   }
 }
+//styling the back to top button
+.back-to-top {
+  position: fixed;
+  width: 3rem;
+  height: 3rem;
+  right: 1.875rem;
+  bottom: 1.875rem;
+  z-index: 9999;
+  i {
+    @include absoluteCenter;
+    font-size: 1.5rem;
+  }
+}
